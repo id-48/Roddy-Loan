@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_next">Tiếp</string>
+    <string name="btn_continue">Tiếp tục</string>
+    <string name="btn_calculate">Tính toán</string>
+    <string name="btn_submit">Gửi đơn</string>
+    <string name="btn_get_started">Bắt đầu</string>
+    <string name="btn_go_home">Về trang chủ</string>
+    <string name="btn_spin_now">Quay ngay</string>
+    <string name="btn_retry_now">Thử lại</string>
+    <string name="btn_check_eligibility">Kiểm tra điều kiện</string>
+    <string name="btn_get_insurance">Mua bảo hiểm</string>
+    <string name="btn_copy_link">Sao chép liên kết</string>
+    <string name="language_screen_title">Ngôn ngữ</string>
+    <string name="language_headline">Chọn ngôn ngữ</string>
+    <string name="language_subtext">Chọn ngôn ngữ ưa thích để tiếp tục</string>
+    <string name="language_milestone">Chọn ngôn ngữ của bạn</string>
+    <string name="currency_screen_title">Tiền tệ</string>
+    <string name="currency_headline">Chọn tiền tệ</string>
+    <string name="currency_subtext">Chọn tiền tệ như INR, USD, EUR</string>
+    <string name="currency_milestone">Chọn tiền tệ</string>
+    <string name="home_toolbar_title">Máy tính</string>
+    <string name="loan_tracker_title">Theo dõi khoản vay</string>
+    <string name="step_progress">Bước %1$d/%2$d</string>
+    <string name="continue_application">Tiếp tục đơn của bạn</string>
+    <string name="settings_title">Cài đặt</string>
+    <string name="welcome_title">Chào mừng</string>
+    <string name="app_name">Máy tính khoản vay EMI</string>
+    <string name="cat_all_loans">Tất cả loại khoản vay</string>
+    <string name="cat_epf_services">Dịch vụ EPF</string>
+    <string name="cat_insurance_policy">Hợp đồng bảo hiểm</string>
+    <string name="cat_loan_guide">Hướng dẫn khoản vay</string>
+    <string name="desc_banking">FD, RD, lãi suất đơn</string>
+    <string name="desc_financial">EMI, SIP, PPF và hơn nữa</string>
+    <string name="desc_loan">Vay cá nhân, nhà, xe</string>
+    <string name="desc_gst">Máy tính GST</string>
+    <string name="desc_mutual">Máy tính quỹ tương hỗ</string>
+    <string name="desc_stock">Máy tính cổ phiếu</string>
+    <string name="desc_other">Máy tính khác</string>
+    <string-array name="onboarding_step_labels">
+        <item>Ngôn ngữ</item>
+        <item>Tiền tệ</item>
+        <item>Chào mừng</item>
+        <item>Ngân hàng</item>
+        <item>Loại vay</item>
+        <item>Mục đích</item>
+        <item>Số tiền</item>
+        <item>Kỳ hạn</item>
+        <item>Lãi suất</item>
+        <item>Xem trước EMI</item>
+        <item>Thông tin cơ bản</item>
+        <item>Liên hệ</item>
+        <item>Địa chỉ</item>
+        <item>Việc làm</item>
+        <item>Thu nhập</item>
+        <item>Chi phí</item>
+        <item>Vòng quay</item>
+        <item>Phân tích AI</item>
+        <item>Xử lý cuối</item>
+        <item>Rủi ro</item>
+        <item>Xem lại cuối</item>
+        <item>Đã duyệt</item>
+        <item>Ưu đãi vay</item>
+    </string-array>
+    <string name="settings_language">Ngôn ngữ</string>
+    <string name="settings_language_fmt">Ngôn ngữ · %1$s</string>
+    <string name="settings_currency">Đổi tiền tệ</string>
+    <string name="settings_currency_fmt">Tiền tệ · %1$s</string>
+    <string name="settings_share">Chia sẻ ứng dụng</string>
+    <string name="settings_privacy">Chính sách bảo mật</string>
+</resources>

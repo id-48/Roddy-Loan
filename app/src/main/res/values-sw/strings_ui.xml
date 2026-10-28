@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_next">Endelea</string>
+    <string name="btn_continue">Endelea</string>
+    <string name="btn_calculate">Kokotoa</string>
+    <string name="btn_submit">Wasilisha ombi</string>
+    <string name="btn_get_started">Anza</string>
+    <string name="btn_go_home">Nenda nyumbani</string>
+    <string name="btn_spin_now">Zungusha sasa</string>
+    <string name="btn_retry_now">Jaribu tena</string>
+    <string name="btn_check_eligibility">Angalia ustahiki</string>
+    <string name="btn_get_insurance">Pata bima</string>
+    <string name="btn_copy_link">Nakili kiungo</string>
+    <string name="language_screen_title">Lugha</string>
+    <string name="language_headline">Chagua lugha</string>
+    <string name="language_subtext">Chagua lugha unayopendelea kuendelea</string>
+    <string name="language_milestone">Chagua lugha yako</string>
+    <string name="currency_screen_title">Sarafu</string>
+    <string name="currency_headline">Chagua sarafu</string>
+    <string name="currency_subtext">Chagua sarafu kama INR, USD, EUR</string>
+    <string name="currency_milestone">Chagua sarafu</string>
+    <string name="home_toolbar_title">Vikokotoo</string>
+    <string name="loan_tracker_title">Kifuatiliaji cha mkopo</string>
+    <string name="step_progress">Hatua %1$d/%2$d</string>
+    <string name="continue_application">Endeleza ombi lako</string>
+    <string name="settings_title">Mipangilio</string>
+    <string name="welcome_title">Karibu</string>
+    <string name="app_name">Kikokotoo cha Mkopo wa EMI</string>
+    <string name="cat_all_loans">Aina zote za mikopo</string>
+    <string name="cat_epf_services">Huduma za EPF</string>
+    <string name="cat_insurance_policy">Sera ya bima</string>
+    <string name="cat_loan_guide">Mwongozo wa mkopo</string>
+    <string name="desc_banking">FD, RD, riba rahisi</string>
+    <string name="desc_financial">EMI, SIP, PPF na zaidi</string>
+    <string name="desc_loan">Mkopo wa kibinafsi, nyumba, gari</string>
+    <string name="desc_gst">Kikokotoo cha GST</string>
+    <string name="desc_mutual">Kikokotoo cha mfuko</string>
+    <string name="desc_stock">Kikokotoo cha hisa</string>
+    <string name="desc_other">Vikokotoo vingine</string>
+    <string-array name="onboarding_step_labels">
+        <item>Lugha</item>
+        <item>Sarafu</item>
+        <item>Karibu</item>
+        <item>Benki</item>
+        <item>Aina ya mkopo</item>
+        <item>Madhumuni</item>
+        <item>Kiasi</item>
+        <item>Muda</item>
+        <item>Riba</item>
+        <item>Hakiki EMI</item>
+        <item>Maelezo ya msingi</item>
+        <item>Mawasiliano</item>
+        <item>Anwani</item>
+        <item>Ajira</item>
+        <item>Mapato</item>
+        <item>Matumizi</item>
+        <item>Gurudumu</item>
+        <item>Uchambuzi AI</item>
+        <item>Usindikaji</item>
+        <item>Hatari</item>
+        <item>Ukaguzi</item>
+        <item>Imeidhinishwa</item>
+        <item>Ofa ya mkopo</item>
+    </string-array>
+    <string name="settings_language">Lugha</string>
+    <string name="settings_language_fmt">Lugha · %1$s</string>
+    <string name="settings_currency">Badilisha sarafu</string>
+    <string name="settings_currency_fmt">Sarafu · %1$s</string>
+    <string name="settings_share">Shiriki programu</string>
+    <string name="settings_privacy">Sera ya faragha</string>
+</resources>

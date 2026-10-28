@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_next">آگے</string>
+    <string name="btn_continue">جاری رکھیں</string>
+    <string name="btn_calculate">حساب کریں</string>
+    <string name="btn_submit">درخواست جمع کروائیں</string>
+    <string name="btn_get_started">شروع کریں</string>
+    <string name="btn_go_home">ہوم پر جائیں</string>
+    <string name="btn_spin_now">ابھی گھمائیں</string>
+    <string name="btn_retry_now">دوبارہ کوشش کریں</string>
+    <string name="btn_check_eligibility">اہلیت چیک کریں</string>
+    <string name="btn_get_insurance">انشورنس حاصل کریں</string>
+    <string name="btn_copy_link">لنک کاپی کریں</string>
+    <string name="language_screen_title">زبان</string>
+    <string name="language_headline">زبان منتخب کریں</string>
+    <string name="language_subtext">جاری رکھنے کے لیے اپنی زبان منتخب کریں</string>
+    <string name="language_milestone">اپنی زبان منتخب کریں</string>
+    <string name="currency_screen_title">کرنسی</string>
+    <string name="currency_headline">کرنسی منتخب کریں</string>
+    <string name="currency_subtext">INR، USD، EUR جیسی کرنسی منتخب کریں</string>
+    <string name="currency_milestone">کرنسی منتخب کریں</string>
+    <string name="home_toolbar_title">کیلکولیٹر</string>
+    <string name="loan_tracker_title">قرض ٹریکر</string>
+    <string name="step_progress">مرحلہ %1$d/%2$d</string>
+    <string name="continue_application">اپنی درخواست جاری رکھیں</string>
+    <string name="settings_title">ترتیبات</string>
+    <string name="welcome_title">خوش آمدید</string>
+    <string name="app_name">پرسنل EMI قرض کیلکولیٹر</string>
+    <string name="cat_all_loans">تمام اقسام کے قرضے</string>
+    <string name="cat_epf_services">EPF سروسز</string>
+    <string name="cat_insurance_policy">انشورنس پالیسی</string>
+    <string name="cat_loan_guide">قرض گائیڈ</string>
+    <string name="desc_banking">FD، RD، سادہ سود</string>
+    <string name="desc_financial">EMI، SIP، PPF اور مزید</string>
+    <string name="desc_loan">ذاتی، گھر، آٹو قرض</string>
+    <string name="desc_gst">GST کیلکولیٹر</string>
+    <string name="desc_mutual">میوچل فنڈ کیلکولیٹر</string>
+    <string name="desc_stock">اسٹاک کیلکولیٹر</string>
+    <string name="desc_other">دیگر کیلکولیٹر</string>
+    <string-array name="onboarding_step_labels">
+        <item>زبان</item>
+        <item>کرنسی</item>
+        <item>خوش آمدید</item>
+        <item>بینک</item>
+        <item>قرض کی قسم</item>
+        <item>مقصد</item>
+        <item>رقم</item>
+        <item>مدت</item>
+        <item>سود</item>
+        <item>EMI پیش نظارہ</item>
+        <item>بنیادی تفصیلات</item>
+        <item>رابطہ</item>
+        <item>پتہ</item>
+        <item>ملازمت</item>
+        <item>آمدنی</item>
+        <item>اخراجات</item>
+        <item>سپن وہیل</item>
+        <item>AI تجزیہ</item>
+        <item>حتمی پروسیسنگ</item>
+        <item>خطرہ</item>
+        <item>حتمی جائزہ</item>
+        <item>منظور</item>
+        <item>قرض آفر</item>
+    </string-array>
+    <string name="settings_language">زبان</string>
+    <string name="settings_language_fmt">زبان · %1$s</string>
+    <string name="settings_currency">کرنسی تبدیل کریں</string>
+    <string name="settings_currency_fmt">کرنسی · %1$s</string>
+    <string name="settings_share">ایپ شیئر کریں</string>
+    <string name="settings_privacy">پرائیویسی پالیسی</string>
+</resources>

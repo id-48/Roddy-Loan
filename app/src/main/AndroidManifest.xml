@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+
+    <!-- Explicitly strip restricted Call Log / Contacts if any dependency merges them -->
+    <uses-permission android:name="android.permission.READ_CALL_LOG" tools:node="remove" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" tools:node="remove" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" tools:node="remove"
+        tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" tools:node="remove" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" tools:node="remove" />
+    <uses-permission android:name="android.permission.READ_SMS" tools:node="remove"
+        tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" tools:node="remove"
+        tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
+    <uses-permission android:name="android.permission.SEND_SMS" tools:node="remove"
+        tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.HOME" />
+        </intent>
+    </queries>
+
+<application
+        android:name=".EmiApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:localeConfig="@xml/locales_config"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PersonalEMILoanCalculator"
+        tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="fcm_push" />
+
+        <service
+            android:name=".push.EmiFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- Facebook SDK: disable auto-init provider; App ID/token come from ads config at runtime -->
+        <provider
+            android:name="com.facebook.internal.FacebookInitProvider"
+            android:authorities="${applicationId}.FacebookInitProvider"
+            tools:node="remove" />
+
+        <activity
+            android:name="com.facebook.ads.AudienceNetworkActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
+            tools:replace="android:configChanges" />
+
+        <meta-data
+            android:name="com.facebook.sdk.AutoLogAppEventsEnabled"
+            android:value="true" />
+
+        <meta-data
+            android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled"
+            android:value="true" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.base.BaseActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.banking.BankingCategoryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.banking.EmiLoanCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.banking.FixedDepositCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.banking.PublicProvidentFundCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.banking.RecurringDepositCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.banking.ReturnOnInvestmentActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.financial.CumulativeCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.financial.CurrencyConverterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.financial.DiscountCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.financial.FinancialCategoryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.financial.InflationCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.financial.MarginCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.financial.PriceCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.financial.SalesTaxCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.financial.TipsCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.financial.TvmCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.gst.GstCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.gst.GstCategoryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.gst.MultiRateGstActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.gst.ReverseGstCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.gst.SalesTaxActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.gst.ServiceTaxActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.gst.VatCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.loan.AmortizationCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.loan.AutoCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.loan.CompareCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.loan.InterestCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.loan.InterestOnlyCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.loan.InterestRateCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.loan.InvestmentCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.loan.LoanAffordabilityCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.loan.LoanAmountCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.loan.LoanCategoryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.loan.LoanComparisonCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.loan.LoanEmiCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.loan.LoanTenureCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.loan.MoratoriumCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.loan.MortgageCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.loan.ValueAddCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.mutual.AdvanceSipCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.mutual.CompoundCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.mutual.LumpsumCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.mutual.MutualFundCategoryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.mutual.ScssCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.mutual.SipCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.mutual.SwpCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.other.AgeCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.other.BmiCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.other.BreakEventCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.other.CashCounterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.other.GratuityCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.other.NumberToWordActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.other.OtherCategoryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.other.PetrolDieselPriceActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.other.ProfitMarginCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.other.SimpleCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.other.SipWithInflationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.other.UnitConverterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.stock.DeliveryCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.stock.FuturesCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.stock.IntradayCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.stock.OptionsCalculatorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.calculators.stock.StockCategoryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.guide.GuideActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.guide.InsuranceActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.guide.InsuranceOptionsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.guide.SelectionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.home.HomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.AddressActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.AiAnalysisActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.ApprovedActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.BasicDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.ContactActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.EmiPreviewActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.EmploymentActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.ExpenseActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.FinalProcessingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.FinalReviewActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.HistoryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.IncomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.InterestRateActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.LoanAmountActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.LoanOfferActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.LoanPurposeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.LoanTypeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.RiskAssessmentActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.SpinWheelActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.TenureActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.loan.TrackingDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.onboarding.BankSelectionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.onboarding.CurrencyActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.onboarding.LanguageActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.onboarding.WelcomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.settings.PrivacyPolicyActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.settings.SettingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PLApp" />
+        <activity
+            android:name="com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ui.splash.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.PLApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Enabled at runtime when cohort launcherON is true.
+             Own task so premature HOME finish returns to app (no blink loop). -->
+        <activity
+            android:name=".launcher.LauncherActivity"
+            android:enabled="false"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:theme="@style/Theme.Launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".call.AfterCallActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true"
+            android:theme="@style/Theme.AfterCall" />
+        <receiver
+            android:name=".call.PhoneStateReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".call.AfterCallReminderReceiver"
+            android:exported="false" />
+        <receiver
+            android:name=".call.DebugAfterCallReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.loan.emi.calculator.DEBUG_AFTER_CALL" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.notify.AdminNotifyOpenActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name=".call.WhatsAppCallListener"
+            android:exported="true"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

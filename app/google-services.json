@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "343923617928",
+    "project_id": "blastmohan-loan",
+    "storage_bucket": "blastmohan-loan.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343923617928:android:e38fc0f6fe6da104706f3d",
+        "android_client_info": {
+          "package_name": "com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUbj4SQlxyh1VHp9C10QVSWewX-domzVo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

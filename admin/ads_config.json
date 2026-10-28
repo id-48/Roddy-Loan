@@ -1,0 +1,42 @@
+{
+  "ads_enabled": true,
+  "splash_ad_enabled": true,
+  "ads_config_url": "https://blastmohanloan.anthemknight.tech/",
+  "priority": {
+    "interstitial": [1, 2, 3, 4],
+    "rewarded": [1, 2, 3, 4],
+    "app_open": [1, 2, 3, 4],
+    "native": [1, 2, 3, 4]
+  },
+  "fallback": {
+    "interstitial": [2, 1],
+    "rewarded": [3, 2],
+    "app_open": [1, 2, 3]
+  },
+  "networks": {
+    "admob": {
+      "app_open_id": "ca-app-pub-3940256099942544/9257395921",
+      "interstitial_id": "ca-app-pub-3940256099942544/1033173712",
+      "rewarded_id": "ca-app-pub-3940256099942544/5224354917",
+      "native_id": "ca-app-pub-3940256099942544/2247696110",
+      "banner_id": "ca-app-pub-3940256099942544/6300978111"
+    },
+    "adx": {
+      "app_open": [],
+      "interstitial": [],
+      "rewarded": [],
+      "native": [],
+      "banner": []
+    },
+    "tradplus": {
+      "app_id": "",
+      "app_open_id": "",
+      "interstitial_id": "",
+      "rewarded_id": "",
+      "native_id": ""
+    },
+    "custom": {
+      "custom_url": "https://play.google.com/store"
+    }
+  }
+}

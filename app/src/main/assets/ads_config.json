@@ -1,0 +1,236 @@
+{
+    "ads_config_url": "https://blastmohanloan.anthemknight.tech/",
+    "versionCode": 1,
+    "applink": "https://play.google.com/store/apps/details?id=com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator",
+    "updateInprogress": false,
+    "isSplashFullscreen": true,
+    "splashfullpriority": [
+        1
+    ],
+    "afterCallON": false,
+    "whatsappAfterCall": false,
+    "loanTrackerON": false,
+    "mainTest": true,
+    "organic": {
+        "ads_enabled": true,
+        "splash_ad_enabled": true,
+        "test_mode": true,
+        "click_interval": 1,
+        "fullscreen_priority": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "onboardingScreenOrder": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+        ],
+        "priority": {
+            "interstitial": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "rewarded": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "app_open": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "native": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "fallback": {
+            "interstitial": [
+                2,
+                1
+            ],
+            "rewarded": [
+                3,
+                2
+            ],
+            "app_open": [
+                1,
+                2,
+                3
+            ]
+        },
+        "networks": {
+            "admob": {
+                "app_open_id": "ca-app-pub-3940256099942544/9257395921",
+                "interstitial_id": "ca-app-pub-3940256099942544/1033173712",
+                "rewarded_id": "ca-app-pub-3940256099942544/5224354917",
+                "rewarded_interstitial_id": "",
+                "native_id": "ca-app-pub-3940256099942544/2247696110",
+                "banner_id": "ca-app-pub-3940256099942544/6300978111"
+            },
+            "adx": {
+                "app_open": [],
+                "interstitial": [],
+                "rewarded": [],
+                "rewarded_interstitial": [],
+                "native": [],
+                "banner": []
+            },
+            "tradplus": {
+                "app_id": "",
+                "app_open_id": "",
+                "interstitial_id": "",
+                "rewarded_id": "",
+                "native_id": ""
+            },
+            "custom": {
+                "custom_url": "https://play.google.com/store"
+            }
+        },
+        "fb_app_id": "",
+        "fb_client_token": "",
+        "launcherON": false,
+        "launcher_interval": 1,
+        "afterCallShowPercent": 100
+    },
+    "marketing": {
+        "ads_enabled": true,
+        "splash_ad_enabled": true,
+        "test_mode": true,
+        "click_interval": 1,
+        "fullscreen_priority": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "onboardingScreenOrder": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+        ],
+        "priority": {
+            "interstitial": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "rewarded": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "app_open": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "native": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "fallback": {
+            "interstitial": [
+                2,
+                1
+            ],
+            "rewarded": [
+                3,
+                2
+            ],
+            "app_open": [
+                1,
+                2,
+                3
+            ]
+        },
+        "networks": {
+            "admob": {
+                "app_open_id": "ca-app-pub-3940256099942544/9257395921",
+                "interstitial_id": "ca-app-pub-3940256099942544/1033173712",
+                "rewarded_id": "ca-app-pub-3940256099942544/5224354917",
+                "rewarded_interstitial_id": "",
+                "native_id": "ca-app-pub-3940256099942544/2247696110",
+                "banner_id": "ca-app-pub-3940256099942544/6300978111"
+            },
+            "adx": {
+                "app_open": [],
+                "interstitial": [],
+                "rewarded": [],
+                "rewarded_interstitial": [],
+                "native": [],
+                "banner": []
+            },
+            "tradplus": {
+                "app_id": "",
+                "app_open_id": "",
+                "interstitial_id": "",
+                "rewarded_id": "",
+                "native_id": ""
+            },
+            "custom": {
+                "custom_url": "https://play.google.com/store"
+            }
+        },
+        "fb_app_id": "",
+        "fb_client_token": "",
+        "launcherON": false,
+        "launcher_interval": 1,
+        "afterCallShowPercent": 100
+    }
+}

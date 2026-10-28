@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/pl_init_progress_header"/>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp">
+<com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/colorCardBorder"
+                app:strokeWidth="1dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tvHeadline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Information"
+                        style="@style/PLTextView.Headline"/>
+                    <TextView
+                        android:id="@+id/tvSubtext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Please choose"
+                        style="@style/PLTextView.Body"/>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/llChipContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+                        <TextView
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/custom_chip_text_selector"
+                            android:gravity="center"
+                            android:id="@+id/tvChipSalaried"
+                            android:background="@drawable/bg_custom_chip"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:text="Type A"/>
+                        <TextView
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/custom_chip_text_selector"
+                            android:gravity="center"
+                            android:id="@+id/tvChipSelfEmployed"
+                            android:background="@drawable/bg_custom_chip"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Type B"/>
+                        <TextView
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/custom_chip_text_selector"
+                            android:gravity="center"
+                            android:id="@+id/tvChipBusiness"
+                            android:background="@drawable/bg_custom_chip"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Type C"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginVertical="5dp"
+                layout="@layout/put_big_nativead2"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/btn_continue"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="5dp"
+        app:cornerRadius="12dp"
+        style="@style/PLButton.Primary"/>
+    <include layout="@layout/put_bannerad"/>
+</LinearLayout>

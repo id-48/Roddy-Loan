@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_next">পরবর্তী</string>
+    <string name="btn_continue">চালিয়ে যান</string>
+    <string name="btn_calculate">হিসাব করুন</string>
+    <string name="btn_submit">আবেদন জমা দিন</string>
+    <string name="btn_get_started">শুরু করুন</string>
+    <string name="btn_go_home">হোমে যান</string>
+    <string name="btn_spin_now">এখনই ঘোরান</string>
+    <string name="btn_retry_now">আবার চেষ্টা</string>
+    <string name="btn_check_eligibility">যোগ্যতা যাচাই</string>
+    <string name="btn_get_insurance">বীমা নিন</string>
+    <string name="btn_copy_link">লিংক কপি</string>
+    <string name="language_screen_title">ভাষা</string>
+    <string name="language_headline">ভাষা নির্বাচন</string>
+    <string name="language_subtext">চালিয়ে যেতে আপনার ভাষা বেছে নিন</string>
+    <string name="language_milestone">আপনার ভাষা বেছে নিন</string>
+    <string name="currency_screen_title">মুদ্রা</string>
+    <string name="currency_headline">মুদ্রা বেছে নিন</string>
+    <string name="currency_subtext">INR, USD, EUR এর মতো মুদ্রা বেছে নিন</string>
+    <string name="currency_milestone">মুদ্রা নির্বাচন</string>
+    <string name="home_toolbar_title">ক্যালকুলেটর</string>
+    <string name="loan_tracker_title">লোন ট্র্যাকার</string>
+    <string name="step_progress">ধাপ %1$d/%2$d</string>
+    <string name="continue_application">আপনার আবেদন চালিয়ে যান</string>
+    <string name="settings_title">সেটিংস</string>
+    <string name="welcome_title">স্বাগতম</string>
+    <string name="app_name">পার্সোনাল ইএমআই লোন ক্যালকুলেটর</string>
+    <string name="cat_all_loans">সব ধরনের ঋণ</string>
+    <string name="cat_epf_services">ইপিএফ সেবা</string>
+    <string name="cat_insurance_policy">বীমা পলিসি</string>
+    <string name="cat_loan_guide">লোন গাইড</string>
+    <string name="desc_banking">FD, RD, সরল সুদ</string>
+    <string name="desc_financial">EMI, SIP, PPF এবং আরও</string>
+    <string name="desc_loan">ব্যক্তিগত, হোম, অটো লোন</string>
+    <string name="desc_gst">জিএসটি ক্যালকুলেটর</string>
+    <string name="desc_mutual">মিউচুয়াল ফান্ড ক্যালকুলেটর</string>
+    <string name="desc_stock">স্টক ক্যালকুলেটর</string>
+    <string name="desc_other">অন্যান্য ক্যালকুলেটর</string>
+    <string-array name="onboarding_step_labels">
+        <item>ভাষা</item>
+        <item>মুদ্রা</item>
+        <item>স্বাগতম</item>
+        <item>ব্যাংক</item>
+        <item>লোনের ধরন</item>
+        <item>উদ্দেশ্য</item>
+        <item>পরিমাণ</item>
+        <item>মেয়াদ</item>
+        <item>সুদ</item>
+        <item>ইএমআই প্রিভিউ</item>
+        <item>মূল তথ্য</item>
+        <item>যোগাযোগ</item>
+        <item>ঠিকানা</item>
+        <item>চাকরি</item>
+        <item>আয়</item>
+        <item>ব্যয়</item>
+        <item>স্পিন হুইল</item>
+        <item>এআই বিশ্লেষণ</item>
+        <item>চূড়ান্ত প্রক্রিয়া</item>
+        <item>ঝুঁকি</item>
+        <item>চূড়ান্ত পর্যালোচনা</item>
+        <item>অনুমোদিত</item>
+        <item>লোন অফার</item>
+    </string-array>
+    <string name="settings_language">ভাষা</string>
+    <string name="settings_language_fmt">ভাষা · %1$s</string>
+    <string name="settings_currency">মুদ্রা পরিবর্তন</string>
+    <string name="settings_currency_fmt">মুদ্রা · %1$s</string>
+    <string name="settings_share">অ্যাপ শেয়ার</string>
+    <string name="settings_privacy">গোপনীয়তা নীতি</string>
+</resources>

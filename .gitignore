@@ -1,0 +1,70 @@
+# Built application files
+*.apk
+*.ap_
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+build/
+**/build/
+
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradletasknamecache
+
+# Local configuration
+local.properties
+*.iml
+.idea/
+.cxx/
+.externalNativeBuild/
+captures/
+.DS_Store
+
+# NDK
+obj/
+
+# Signing
+*.jks
+*.keystore
+*.key
+keystore.properties
+
+# Crashlytics / secrets
+crashlytics.properties
+fabric.properties
+
+# Admin runtime data + DB secrets (do not publish)
+admin/data/*.json
+admin/data/*.sqlite
+admin/data/*.db
+!admin/data/.gitkeep
+admin/db_config.php
+
+# Logs / temp
+*.log
+*.tmp
+*.swp
+*~
+
+# Kotlin / IDE
+.kotlin/
+*.hprof
+.navigation/
+
+# Optional: keep google-services.json in repo for Firebase builds
+# (remove from ignore — currently tracked intentionally)
+
+# Archives that may contain secrets
+*.zip
+admin.zip

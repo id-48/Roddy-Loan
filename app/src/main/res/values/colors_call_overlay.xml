@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="call_action_green">#FF66BB6A</color>
+    <color name="call_action_blue">#FF42A5F5</color>
+    <color name="call_overlay_scrim">#99000000</color>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_next">Susunod</string>
+    <string name="btn_continue">Magpatuloy</string>
+    <string name="btn_calculate">Kalkulahin</string>
+    <string name="btn_submit">Isumite ang aplikasyon</string>
+    <string name="btn_get_started">Magsimula</string>
+    <string name="btn_go_home">Pumunta sa Home</string>
+    <string name="btn_spin_now">I-spin ngayon</string>
+    <string name="btn_retry_now">Subukan muli</string>
+    <string name="btn_check_eligibility">Suriin ang eligibility</string>
+    <string name="btn_get_insurance">Kumuha ng insurance</string>
+    <string name="btn_copy_link">Kopyahin ang link</string>
+    <string name="language_screen_title">Wika</string>
+    <string name="language_headline">Pumili ng wika</string>
+    <string name="language_subtext">Piliin ang preperidong wika upang magpatuloy</string>
+    <string name="language_milestone">Piliin ang iyong wika</string>
+    <string name="currency_screen_title">Pera</string>
+    <string name="currency_headline">Pumili ng currency</string>
+    <string name="currency_subtext">Pumili ng currency tulad ng INR, USD, EUR</string>
+    <string name="currency_milestone">Pumili ng currency</string>
+    <string name="home_toolbar_title">Mga Calculator</string>
+    <string name="loan_tracker_title">Loan Tracker</string>
+    <string name="step_progress">Hakbang %1$d/%2$d</string>
+    <string name="continue_application">Ipagpatuloy ang aplikasyon</string>
+    <string name="settings_title">Mga Setting</string>
+    <string name="welcome_title">Maligayang pagdating</string>
+    <string name="app_name">Personal EMI Loan Calculator</string>
+    <string name="cat_all_loans">Lahat ng uri ng loan</string>
+    <string name="cat_epf_services">Mga serbisyo ng EPF</string>
+    <string name="cat_insurance_policy">Insurance policy</string>
+    <string name="cat_loan_guide">Gabay sa loan</string>
+    <string name="desc_banking">FD, RD, simpleng interes</string>
+    <string name="desc_financial">EMI, SIP, PPF at iba pa</string>
+    <string name="desc_loan">Personal, home, auto loan</string>
+    <string name="desc_gst">GST calculator</string>
+    <string name="desc_mutual">Mutual fund calculator</string>
+    <string name="desc_stock">Stock calculator</string>
+    <string name="desc_other">Iba pang calculator</string>
+    <string-array name="onboarding_step_labels">
+        <item>Wika</item>
+        <item>Currency</item>
+        <item>Welcome</item>
+        <item>Bangko</item>
+        <item>Uri ng loan</item>
+        <item>Layunin</item>
+        <item>Halaga</item>
+        <item>Tenure</item>
+        <item>Interest</item>
+        <item>EMI preview</item>
+        <item>Basic details</item>
+        <item>Contact</item>
+        <item>Address</item>
+        <item>Trabaho</item>
+        <item>Kita</item>
+        <item>Gastos</item>
+        <item>Spin wheel</item>
+        <item>AI analysis</item>
+        <item>Final processing</item>
+        <item>Risk</item>
+        <item>Final review</item>
+        <item>Approved</item>
+        <item>Loan offer</item>
+    </string-array>
+    <string name="settings_language">Wika</string>
+    <string name="settings_language_fmt">Wika · %1$s</string>
+    <string name="settings_currency">Palitan ang currency</string>
+    <string name="settings_currency_fmt">Currency · %1$s</string>
+    <string name="settings_share">I-share ang app</string>
+    <string name="settings_privacy">Privacy Policy</string>
+</resources>

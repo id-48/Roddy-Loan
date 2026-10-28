@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="after_call_title">Call Ended • Quick Actions</string>
+    <string name="after_call_private_number">Private Number</string>
+    <string name="loan_eligible_close">Close</string>
+    <string name="after_call_note_hint">Add a quick note…</string>
+    <string name="after_call_save">Save note</string>
+    <string name="after_call_call_back">Call back</string>
+    <string name="after_call_reminder">Reminder</string>
+    <string name="after_call_whatsapp">WhatsApp</string>
+    <string name="after_call_message">Message</string>
+    <string name="call_quick_reply_1">I\'ll call you back</string>
+    <string name="call_quick_reply_2">Can\'t talk now</string>
+    <string name="call_quick_reply_3">On my way</string>
+    <string name="call_quick_reply_4">Thanks</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Premium teal theme -->
+    <color name="colorPrimary">#0F766E</color>
+    <color name="colorPrimaryDark">#0D5C56</color>
+    <color name="colorAccent">#14B8A6</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+
+    <color name="colorBackground">#F0FDFA</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorCard">#FFFFFF</color>
+    <color name="colorCardBorder">#CCFBF1</color>
+    <color name="colorDivider">#E2E8F0</color>
+    <color name="colorInputBackground">#F8FAFC</color>
+    <color name="colorProgressBg">#CCFBF1</color>
+
+    <color name="colorText">#0F172A</color>
+    <color name="colorSubText">#64748B</color>
+    <color name="colorSuccess">#0F766E</color>
+    <color name="colorWarning">#F59E0B</color>
+    <color name="colorError">#EF4444</color>
+    <color name="colorOrange">#F97316</color>
+    <color name="grey">#6A6A6A</color>
+    <color name="light_grey">#F1F5F9</color>
+</resources>

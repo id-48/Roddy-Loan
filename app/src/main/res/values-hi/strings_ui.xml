@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_next">आगे</string>
+    <string name="btn_continue">जारी रखें</string>
+    <string name="btn_calculate">गणना करें</string>
+    <string name="btn_submit">आवेदन जमा करें</string>
+    <string name="btn_get_started">शुरू करें</string>
+    <string name="btn_go_home">होम पर जाएँ</string>
+    <string name="btn_spin_now">अभी घुमाएँ</string>
+    <string name="btn_retry_now">फिर कोशिश करें</string>
+    <string name="btn_check_eligibility">पात्रता जाँचें</string>
+    <string name="btn_get_insurance">बीमा लें</string>
+    <string name="btn_copy_link">लिंक कॉपी करें</string>
+    <string name="language_screen_title">भाषा</string>
+    <string name="language_headline">भाषा चुनें</string>
+    <string name="language_subtext">जारी रखने के लिए अपनी भाषा चुनें</string>
+    <string name="language_milestone">अपनी भाषा चुनें</string>
+    <string name="currency_screen_title">मुद्रा</string>
+    <string name="currency_headline">मुद्रा चुनें</string>
+    <string name="currency_subtext">INR, USD, EUR जैसी मुद्रा चुनें</string>
+    <string name="currency_milestone">मुद्रा चुनें</string>
+    <string name="home_toolbar_title">कैलकुलेटर</string>
+    <string name="loan_tracker_title">लोन ट्रैकर</string>
+    <string name="step_progress">चरण %1$d/%2$d</string>
+    <string name="continue_application">अपना आवेदन जारी रखें</string>
+    <string name="settings_title">सेटिंग्स</string>
+    <string name="welcome_title">स्वागत है</string>
+    <string name="app_name">पर्सनल ईएमआई लोन कैलकुलेटर</string>
+    <string name="cat_all_loans">सभी प्रकार के ऋण</string>
+    <string name="cat_epf_services">ईपीएफ सेवाएँ</string>
+    <string name="cat_insurance_policy">बीमा पॉलिसी</string>
+    <string name="cat_loan_guide">लोन गाइड</string>
+    <string name="desc_banking">एफडी, आरडी, साधारण ब्याज</string>
+    <string name="desc_financial">ईएमआई, एसआईपी, पीपीएफ और अधिक</string>
+    <string name="desc_loan">व्यक्तिगत, गृह, ऑटो ऋण</string>
+    <string name="desc_gst">जीएसटी कैलकुलेटर</string>
+    <string name="desc_mutual">म्यूचुअल फंड कैलकुलेटर</string>
+    <string name="desc_stock">स्टॉक कैलकुलेटर</string>
+    <string name="desc_other">अन्य कैलकुलेटर</string>
+    <string-array name="onboarding_step_labels">
+        <item>भाषा</item>
+        <item>मुद्रा</item>
+        <item>स्वागत</item>
+        <item>बैंक</item>
+        <item>लोन प्रकार</item>
+        <item>उद्देश्य</item>
+        <item>राशि</item>
+        <item>अवधि</item>
+        <item>ब्याज</item>
+        <item>ईएमआई पूर्वावलोकन</item>
+        <item>मूल विवरण</item>
+        <item>संपर्क</item>
+        <item>पता</item>
+        <item>रोजगार</item>
+        <item>आय</item>
+        <item>खर्च</item>
+        <item>स्पिन व्हील</item>
+        <item>एआई विश्लेषण</item>
+        <item>अंतिम प्रसंस्करण</item>
+        <item>जोखिम</item>
+        <item>अंतिम समीक्षा</item>
+        <item>स्वीकृत</item>
+        <item>लोन ऑफ़र</item>
+    </string-array>
+    <string name="settings_language">भाषा</string>
+    <string name="settings_language_fmt">भाषा · %1$s</string>
+    <string name="settings_currency">मुद्रा बदलें</string>
+    <string name="settings_currency_fmt">मुद्रा · %1$s</string>
+    <string name="settings_share">ऐप शेयर करें</string>
+    <string name="settings_privacy">गोपनीयता नीति</string>
+</resources>

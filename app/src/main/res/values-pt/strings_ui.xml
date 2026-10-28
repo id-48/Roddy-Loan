@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_next">Seguinte</string>
+    <string name="btn_continue">Continuar</string>
+    <string name="btn_calculate">Calcular</string>
+    <string name="btn_submit">Enviar pedido</string>
+    <string name="btn_get_started">Começar</string>
+    <string name="btn_go_home">Ir para início</string>
+    <string name="btn_spin_now">Girar agora</string>
+    <string name="btn_retry_now">Tentar novamente</string>
+    <string name="btn_check_eligibility">Verificar elegibilidade</string>
+    <string name="btn_get_insurance">Obter seguro</string>
+    <string name="btn_copy_link">Copiar link</string>
+    <string name="language_screen_title">Idioma</string>
+    <string name="language_headline">Selecionar idioma</string>
+    <string name="language_subtext">Escolha o idioma preferido para continuar</string>
+    <string name="language_milestone">Escolha seu idioma</string>
+    <string name="currency_screen_title">Moeda</string>
+    <string name="currency_headline">Escolher moeda</string>
+    <string name="currency_subtext">Selecione moeda como INR, USD, EUR</string>
+    <string name="currency_milestone">Selecionar moeda</string>
+    <string name="home_toolbar_title">Calculadoras</string>
+    <string name="loan_tracker_title">Rastreador de empréstimo</string>
+    <string name="step_progress">Passo %1$d/%2$d</string>
+    <string name="continue_application">Continue sua solicitação</string>
+    <string name="settings_title">Configurações</string>
+    <string name="welcome_title">Bem-vindo</string>
+    <string name="app_name">Calculadora de Empréstimo EMI</string>
+    <string name="cat_all_loans">Todos os tipos de empréstimo</string>
+    <string name="cat_epf_services">Serviços EPF</string>
+    <string name="cat_insurance_policy">Apólice de seguro</string>
+    <string name="cat_loan_guide">Guia de empréstimo</string>
+    <string name="desc_banking">FD, RD, juros simples</string>
+    <string name="desc_financial">EMI, SIP, PPF e mais</string>
+    <string name="desc_loan">Empréstimo pessoal, casa, auto</string>
+    <string name="desc_gst">Calculadora GST</string>
+    <string name="desc_mutual">Calculadora de fundos</string>
+    <string name="desc_stock">Calculadora de ações</string>
+    <string name="desc_other">Outras calculadoras</string>
+    <string-array name="onboarding_step_labels">
+        <item>Idioma</item>
+        <item>Moeda</item>
+        <item>Bem-vindo</item>
+        <item>Banco</item>
+        <item>Tipo de empréstimo</item>
+        <item>Objetivo</item>
+        <item>Valor</item>
+        <item>Prazo</item>
+        <item>Juros</item>
+        <item>Prévia EMI</item>
+        <item>Dados básicos</item>
+        <item>Contato</item>
+        <item>Endereço</item>
+        <item>Emprego</item>
+        <item>Renda</item>
+        <item>Despesa</item>
+        <item>Roleta</item>
+        <item>Análise IA</item>
+        <item>Processamento</item>
+        <item>Risco</item>
+        <item>Revisão final</item>
+        <item>Aprovado</item>
+        <item>Oferta</item>
+    </string-array>
+    <string name="settings_language">Idioma</string>
+    <string name="settings_language_fmt">Idioma · %1$s</string>
+    <string name="settings_currency">Alterar moeda</string>
+    <string name="settings_currency_fmt">Moeda · %1$s</string>
+    <string name="settings_share">Compartilhar app</string>
+    <string name="settings_privacy">Política de privacidade</string>
+</resources>

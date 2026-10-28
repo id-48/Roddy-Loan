@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_next">Berikutnya</string>
+    <string name="btn_continue">Lanjutkan</string>
+    <string name="btn_calculate">Hitung</string>
+    <string name="btn_submit">Kirim aplikasi</string>
+    <string name="btn_get_started">Mulai</string>
+    <string name="btn_go_home">Ke beranda</string>
+    <string name="btn_spin_now">Putar sekarang</string>
+    <string name="btn_retry_now">Coba lagi</string>
+    <string name="btn_check_eligibility">Cek kelayakan</string>
+    <string name="btn_get_insurance">Dapatkan asuransi</string>
+    <string name="btn_copy_link">Salin tautan</string>
+    <string name="language_screen_title">Bahasa</string>
+    <string name="language_headline">Pilih bahasa</string>
+    <string name="language_subtext">Pilih bahasa pilihan Anda untuk lanjut</string>
+    <string name="language_milestone">Pilih bahasa Anda</string>
+    <string name="currency_screen_title">Mata uang</string>
+    <string name="currency_headline">Pilih mata uang</string>
+    <string name="currency_subtext">Pilih mata uang seperti INR, USD, EUR</string>
+    <string name="currency_milestone">Pilih mata uang</string>
+    <string name="home_toolbar_title">Kalkulator</string>
+    <string name="loan_tracker_title">Pelacak pinjaman</string>
+    <string name="step_progress">Langkah %1$d/%2$d</string>
+    <string name="continue_application">Lanjutkan aplikasi Anda</string>
+    <string name="settings_title">Pengaturan</string>
+    <string name="welcome_title">Selamat datang</string>
+    <string name="app_name">Kalkulator Pinjaman EMI</string>
+    <string name="cat_all_loans">Semua jenis pinjaman</string>
+    <string name="cat_epf_services">Layanan EPF</string>
+    <string name="cat_insurance_policy">Polis asuransi</string>
+    <string name="cat_loan_guide">Panduan pinjaman</string>
+    <string name="desc_banking">FD, RD, bunga sederhana</string>
+    <string name="desc_financial">EMI, SIP, PPF dan lainnya</string>
+    <string name="desc_loan">Pinjaman pribadi, rumah, mobil</string>
+    <string name="desc_gst">Kalkulator GST</string>
+    <string name="desc_mutual">Kalkulator reksa dana</string>
+    <string name="desc_stock">Kalkulator saham</string>
+    <string name="desc_other">Kalkulator lainnya</string>
+    <string-array name="onboarding_step_labels">
+        <item>Bahasa</item>
+        <item>Mata uang</item>
+        <item>Selamat datang</item>
+        <item>Bank</item>
+        <item>Jenis pinjaman</item>
+        <item>Tujuan</item>
+        <item>Jumlah</item>
+        <item>Tenor</item>
+        <item>Bunga</item>
+        <item>Pratinjau EMI</item>
+        <item>Detail dasar</item>
+        <item>Kontak</item>
+        <item>Alamat</item>
+        <item>Pekerjaan</item>
+        <item>Pendapatan</item>
+        <item>Pengeluaran</item>
+        <item>Roda putar</item>
+        <item>Analisis AI</item>
+        <item>Proses akhir</item>
+        <item>Risiko</item>
+        <item>Tinjauan akhir</item>
+        <item>Disetujui</item>
+        <item>Penawaran</item>
+    </string-array>
+    <string name="settings_language">Bahasa</string>
+    <string name="settings_language_fmt">Bahasa · %1$s</string>
+    <string name="settings_currency">Ubah mata uang</string>
+    <string name="settings_currency_fmt">Mata uang · %1$s</string>
+    <string name="settings_share">Bagikan aplikasi</string>
+    <string name="settings_privacy">Kebijakan privasi</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- umbrella canopy -->
+    <path
+        android:fillColor="#0F766E"
+        android:pathData="M24,8 C14,8 7,15 6,24 H42 C41,15 34,8 24,8 Z"/>
+    <path
+        android:fillColor="#14B8A6"
+        android:pathData="M24,8 C20,8 16.5,11 15,16 H33 C31.5,11 28,8 24,8 Z"/>
+    <!-- shaft -->
+    <path
+        android:fillColor="#0F766E"
+        android:pathData="M23,24 H25 V36 C25,38.2 23.2,40 21,40 H18 V38 H21 C22.1,38 23,37.1 23,36 Z"/>
+    <!-- handle tip -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M6,24 A2,2 0 1,0 6.01,24 Z"/>
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M42,24 A2,2 0 1,0 42.01,24 Z"/>
+</vector>
