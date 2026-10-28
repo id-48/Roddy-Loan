@@ -24,6 +24,7 @@ import com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialca
 import com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ads.AdsManager;
 import com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ads.AdsPrefs;
 import com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ads.DeviceTracker;
+import com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.ads.InstallCohort;
 import com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.analytics.Analytics;
 import com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.analytics.ClickTracker;
 import com.loan.emi.calculator.loanemicalc.finance.bankingcalculator.financialcalculator.data.AppPrefs;
@@ -59,6 +60,13 @@ public class SplashActivity extends AppCompatActivity {
             retry.setVisibility(View.GONE);
         }
         Analytics.logEvent("splash_open");
+        // Debug APK only: adb … SplashActivity --ez force_marketing true
+        boolean debuggable = (getApplicationInfo().flags
+                & android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE) != 0;
+        if (debuggable && getIntent() != null
+                && getIntent().getBooleanExtra("force_marketing", false)) {
+            InstallCohort.markMarketing(this, true);
+        }
         if (PermissionHelper.requestNotificationIfNeeded(this)) {
             return;
         }

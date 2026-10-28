@@ -79,6 +79,9 @@ public final class AdsPrefs {
 
     /** Marketing Loan Tracker switch (admin loanTrackerON). Organic never shows tracker. */
     public static boolean isLoanTrackerEnabled(Context context) {
+        if (!isMarketingUser(context)) {
+            return false;
+        }
         AdsConfig config = AdsManager.get().config();
         if (config != null && config.loanTrackerON != null) {
             return config.loanTrackerON;

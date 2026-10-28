@@ -208,7 +208,8 @@ public class AdsConfig {
                     if (cohort.afterCallShowPercent == null) {
                         cohort.afterCallShowPercent = shared.afterCallShowPercent;
                     }
-                    cohort.loanTrackerON = shared.loanTrackerON;
+                    // loanTrackerON is marketing-only (admin App settings)
+                    cohort.loanTrackerON = marketing && shared.loanTrackerON != null && shared.loanTrackerON;
                     // Prefer cohort onboarding order (organic/marketing); fall back to root
                     if (cohort.onboardingScreenOrder == null || cohort.onboardingScreenOrder.isEmpty()) {
                         cohort.onboardingScreenOrder = shared.onboardingScreenOrder;

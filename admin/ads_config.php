@@ -9,7 +9,10 @@ $audience = strtolower(trim((string)($_GET['audience'] ?? 'organic')));
 if ($audience !== 'marketing') {
     $audience = 'organic';
 }
-$cohort = $settings[$audience] ?? emptyNetworkBundle();
+$organic = $settings['organic'] ?? emptyNetworkBundle();
+$marketing = $settings['marketing'] ?? emptyNetworkBundle();
+$cohort = $audience === 'marketing' ? $marketing : $organic;
+// Flatten selected cohort at root + keep both cohorts so the app can pick by Install Referrer.
 $payload = array_merge($cohort, [
     'ads_config_url' => $settings['ads_config_url'] ?? DEFAULT_API_BASE,
     'versionCode' => (int)($settings['versionCode'] ?? 1),
@@ -20,13 +23,14 @@ $payload = array_merge($cohort, [
     'afterCallON' => !empty($settings['afterCallON']),
     'whatsappAfterCall' => !empty($settings['whatsappAfterCall']),
     'afterCallShowPercent' => max(0, min(100, (int)($cohort['afterCallShowPercent'] ?? 100))),
-    'loanTrackerON' => !empty($settings['loanTrackerON']),
+    // Server flag; app still forces false for organic users
+    'loanTrackerON' => $audience === 'marketing' && !empty($settings['loanTrackerON']),
     'onboardingScreenOrder' => array_values(
         $cohort['onboardingScreenOrder'] ?? defaultOnboardingOrder()
     ),
     'mainTest' => false,
     'userAudience' => $audience,
-    'organic' => $settings['organic'] ?? emptyNetworkBundle(),
-    'marketing' => $settings['marketing'] ?? emptyNetworkBundle(),
+    'organic' => $organic,
+    'marketing' => $marketing,
 ]);
 echo json_encode($payload, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);

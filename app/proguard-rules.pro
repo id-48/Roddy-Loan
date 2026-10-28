@@ -72,6 +72,10 @@
 -keep class com.facebook.** { *; }
 -dontwarn com.facebook.**
 
+# ---- Play Install Referrer (organic vs marketing) ----
+-keep class com.android.installreferrer.** { *; }
+-dontwarn com.android.installreferrer.**
+
 # ---- AndroidX lifecycle (LauncherGate ProcessLifecycleOwner) ----
 -keep class androidx.lifecycle.** { *; }
 -dontwarn androidx.lifecycle.**

@@ -36,6 +36,7 @@ public final class AdsConfigLoader {
     public static void load(Context context, Callback callback) {
         Context app = context.getApplicationContext();
         InstallCohort.resolve(app, marketing -> EXECUTOR.execute(() -> {
+            Log.i(TAG, "audience resolved → " + (marketing ? "marketing" : "organic"));
             AdsConfig config = resolve(app, marketing);
             AdsPrefs.cacheFlags(app, config);
             MAIN.post(() -> {
@@ -50,6 +51,7 @@ public final class AdsConfigLoader {
 
     private static AdsConfig resolve(Context context, boolean marketing) {
         SharedPreferences prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
+        String audience = marketing ? "marketing" : "organic";
         String asset = readAsset(context, "ads_config.json");
         AdsConfig fromAsset = AdsConfig.parse(asset, marketing);
         // Base URL only from native (C++); never from assets/prefs plaintext
@@ -57,22 +59,23 @@ public final class AdsConfigLoader {
         if (!TextUtils.isEmpty(remoteUrl)) {
             String withAudience = remoteUrl
                     + (remoteUrl.contains("?") ? "&" : "?")
-                    + "audience=" + (marketing ? "marketing" : "organic");
+                    + "audience=" + audience;
             Log.d(TAG, "fetching remote ads config url=" + withAudience);
             String remote = download(withAudience);
             if (!TextUtils.isEmpty(remote)) {
-                logAdsJson("api", remote);
+                logAdsJson("api/" + audience, remote);
+                // Keep full JSON (organic+marketing) so cache can serve either cohort
                 prefs.edit().putString(KEY_CACHE, remote).apply();
                 return AdsConfig.parse(remote, marketing);
             }
         }
         String cached = prefs.getString(KEY_CACHE, null);
         if (!TextUtils.isEmpty(cached)) {
-            logAdsJson("cache", cached);
+            logAdsJson("cache/" + audience, cached);
             return AdsConfig.parse(cached, marketing);
         }
         if (!TextUtils.isEmpty(asset)) {
-            logAdsJson("asset", asset);
+            logAdsJson("asset/" + audience, asset);
         }
         return fromAsset;
     }
